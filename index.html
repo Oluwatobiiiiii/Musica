@@ -193,31 +193,33 @@
           </div>
         </div>
       </section>
-      <nav>
-       <!--Create a div container and add three divs inside, they'll also be containers, inside them add other divs, you can do this-->
-       <div class="music-container">
-        <div class="music">
-          <img src="" alt="">
+      
+    </main>
+    <nav class="music-nav">
+      <div class="music-container">
+       <div class="music">
+         <img src="/images/Rectangle 26.png" alt="">
+        <div>
           <h4>Seasons in</h4>
           <p>James</p>
         </div>
-        <div class="music-controls">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-        </div>
-          <div class="volume-controls">
-            <img src="" alt="">
-            <input type="range">
-          </div>
        </div>
-       <div class="range">
-        <input type="range" name="range" value="range">
+       <div class="music-controls">
+         <img src="/images/shuffle.svg" alt="">
+         <img src="/images/previous.svg" alt="">
+         <img src="/images/Frame 7.png" alt="">
+         <img src="/images/next.svg" alt="">
+         <img src="/images/repeate-one.svg" alt="">
        </div>
-      </nav>
-    </main>
+         <div class="volume-controls">
+           <img src="/images/volume-high.svg" alt="">
+           <input type="range" min="0" max="100" value="50">
+         </div>
+      </div>
+      <div class="slider-container">
+       <input class="slider" type="range" min="0" max="100" value="40">
+      </div>
+     </nav>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="/app.js"></script>
   </body>

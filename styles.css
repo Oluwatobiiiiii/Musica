@@ -202,20 +202,85 @@ gap: 20px;
     object-fit: cover;
   }
 
-  
+  .music-nav {
+     width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+     -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+  }
+  .music-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 1rem;
+  }
+  .music{
+    display: flex;
+    flex-direction: row;
+  }
+  .music > div {
+    margin: 18px 0 0 20px;
+   
+  }
+  .music img {
+    width: 70px;
+    height: auto;
+    border-radius: 20px;
+  }
+  .music-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+  }
+  .music-controls img {
+   width: 20px;
+  }
+  .music-controls img:nth-child(3) {
+    width: 20px;
+    height: 20px;
+    margin-top: 30px;
+  }
+  .volume-controls{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   
+  }
+  .volume-controls img {
+    width: 20px;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
+   .slider-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0;
+  }
+ 
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    overflow: hidden;
+    background: linear-gradient(to right, #FACD66 0%, #FACD66 40%, rgba(255, 255, 255, 0.06) 40%, rgba(255, 255, 255, 0.06) 100%);
+    cursor: pointer;
+    width: 60%;
+    height: 4px;
+    border-radius: 0.75rem;
+  }
+ input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+ }
+   
 
 /* Mobile Devices */
 @media only screen and (max-width: 600px){
@@ -322,13 +387,13 @@ position: static;
     overscroll-behavior-inline: contain;
     gap: 1.2rem;
     margin-top: 1.2rem;
-    
+
 }
  .charts > div {
     display: flex;
     flex-direction: column;
     min-width: 100%;
-} 
+}
 .song-img{
     width: 38%;
     margin-bottom: 15px;
@@ -349,7 +414,7 @@ position: static;
    margin-left: 90%;
    margin-top: -70%;
    display: none;
- } /* 
+ } /*
  .song-img{
     width: 38%;
     margin-bottom: 15px;
