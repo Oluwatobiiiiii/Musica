@@ -11,5 +11,3 @@ if (w <= 680) {
     spaceBetween: 30
   });
 }
-
-

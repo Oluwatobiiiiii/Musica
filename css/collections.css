@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    background-color:  #1D2123;
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+}
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+a {
+    color: #EFEEE0;
+}
+main {
+    margin: 0 2rem 0 5rem;
+    padding: 1.65rem 1rem;
+}
+/* NavBar */
+.navbar {
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+}
+.logo {
+    margin: 2rem;
+}
+.logo img:first-child {
+    position: absolute;
+    margin: -8px 0 0 -8px;
+}
+.navbar-nav, .navbar-nav2 {
+    list-style-type: none;
+    padding: 0 20px;
+    margin: 2rem 1.5rem 2rem;
+    border-radius: 20px;
+    background-color: #1A1E1F;
+}
+#navbar-nav2 {
+    display: none;
+}
+ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.65rem;
+}
+.nav-link img {
+    margin: 0 1rem;
+}
+.nav-link img:not(#home) {
+    margin: 0 1.5rem;
+}
+.link-text {
+    display: none;
+    color: gray;
+}
+nav .menu-btn i{
+    color: #fff;
+    font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+    display: none;
+  }
+  /* Search Field */
+.search input {
+    width: 1122px;
+    height: 73px;
+   margin-left: 6rem;
+   background-color: #1D2123;
+   border: none;
+   padding: 0 1rem;
+}
+::placeholder {
+    background: url(/images/search.png) no-repeat 0 0;
+    padding-left: 30px;
+}
+/* Collection Section */
+.likes {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.likes span {
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+}
+.likes span:first-child {
+    background-color: #FACD66;
+    border: 1px solid #FACD66;
+    color: #1D2123;
+}
+.likes span:last-child {
+    background-color: #1D2123;
+    color: gray;
+    border: 1px solid gray;
+}
+.collections {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+}
+.collections img {
+    width: 213px;
+    height: 234px;
+    border-radius: 20px;
+}
+.collections > div h3 {
+position: absolute;
+margin: -60px 0 0 20px;
+color: #EFEEE0;
+font-size: 1.35rem;
+font-weight: 100;
+letter-spacing: 0.5px;
+}
+.collections > div p {
+    position: absolute;
+    margin: -35px 0 0 20px;
+    font-size: 0.65rem;
+    font-weight: 100;
+    color: gray;
+}
+.collections > div span {
+    display: none;
+}
+.music-nav {
+    width: 100%;
+    min-height: 6.25rem;
+   background-color: #1A1E1F;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   position: fixed;
+   bottom: 0;
+   z-index: 2;
+    -webkit-backdrop-filter: blur(8px);
+   backdrop-filter: blur(8px);
+   box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+ }
+ .music-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   width: 80%;
+   margin-top: 1rem;
+ }
+ .music{
+   display: flex;
+   flex-direction: row;
+   gap: 20px;
+ }
+ .music > div {
+   margin-top: 18px;
+  
+ }
+ .music img {
+   width: 70px;
+   height: auto;
+   border-radius: 20px;
+ }
+ .music-controls {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   width: 30%;
+ }
+ .music-controls img {
+  width: 20px;
+ }
+ .music-controls img:nth-child(3) {
+   width: 20px;
+   height: 20px;
+   margin-top: 30px;
+ }
+ .volume-controls{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+ }
+ .volume-controls img {
+   width: 20px;
+ }
+
+  .slider-container {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   margin: 0.5rem 0;
+ }
+
+ input[type="range"] {
+   -webkit-appearance: none;
+   appearance: none;
+   overflow: hidden;
+   background: linear-gradient(to right, #FACD66 0%, #FACD66 40%, rgba(255, 255, 255, 0.06) 40%, rgba(255, 255, 255, 0.06) 100%);
+   cursor: pointer;
+   width: 60%;
+   height: 4px;
+   border-radius: 0.75rem;
+ }
+input[type="range"]::-webkit-slider-thumb {
+   -webkit-appearance: none; 
+   appearance: none;
+}
+
+/* Mobile Devices */
+@media only screen and (max-width: 600px){
+    body {
+        overflow-x: hidden;
+    }
+    nav .menu-btn i{
+        display: block;
+        margin-top: -4rem;
+        margin-left: 2rem;
+    }
+    #click:checked ~ .menu-btn i:before {
+        content: "\f00d";
+    }
+    .logo {
+        margin-left: 5rem;
+    }
+    .navbar {
+        top: 0;
+        width: 100vw;
+        height: 5rem;
+        background-color: #1D2123;
+    }
+   .navbar-nav {
+    margin: 0;
+    padding: 7rem 2rem;
+    background-color: #1A1E1F;
+    position: fixed;
+    top: 5rem;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    text-align: left;
+    display: block;
+    transition: all 0.4s ease;
+    z-index: 2;
+   }
+   #navbar-nav2 {
+    display: block;
+   }
+   .navbar-nav2{
+   display: none;
+   }
+   .nav-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 5rem;
+   }
+   .link-text {
+    display: block;
+    text-align: left;
+    font-size: 1.5rem;
+   }
+   #click:checked ~ ul {
+    left: 0;
+}
+#click:checked ~ ul li a {
+    margin-right: 0;
+}
+.search input {
+    width: 20px;
+    height: 30px;
+    padding: 0 1.5rem 0 0.5rem;
+    margin-left: 60%;
+    margin-top: 1.875rem;
+}
+main {
+    margin: 0;
+}
+.collections {
+    flex-direction: column;
+    gap: 10px;
+}
+.collections img {
+    width: 100%;
+    height: 234px;
+}
+.collections > div h3 {
+   margin: -100px 0 0 20px; 
+}
+.collections > div p {
+    margin: -70px 0 0 20px;
+}
+.collections > div span {
+    position: absolute;
+    display: block;
+    margin: -50px 0 0 20px;
+    font-size: 0.75rem;
+    font-weight: 100;
+    color: #EFEEE0;
+}
+#change{
+    content: url(/images/Rectangle\ 14\ \(1\).png);
+}
+#change2 {
+    content: url(/images/cmusic1.svg);
+}
+#change3 {
+    content: url(/images/cmusic.svg);
+}
+#change4{
+    content: url(/images/cmusic2.svg);
+}
+.music-nav {
+    display: none;
+}
+}
